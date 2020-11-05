@@ -7,7 +7,7 @@ public class CatTest {
 		Cat c= new Cat("懒的背时");
 		c.show();
 		//创建集合CatList
-		ArrayList  al = new ArrayList();
+		ArrayList<String>  al = new ArrayList<String>();
 		
 		//添加元素
 		al.add("华华");
@@ -18,7 +18,7 @@ public class CatTest {
 		//打印集合
 		sop(al);
 		//遍历集合
-		Iterator it = al.iterator();
+		Iterator<String> it = al.iterator();
 		while(it.hasNext()){
 			sop("遍历元素："+it.next());
 		}

@@ -12,7 +12,7 @@ public class TestLinkList {
 		list.addFirst("A");
 		list.addLast("B");
 		list.add(2, "C");
-		//list.add(10, "a");报错 越界
+		list.add(10, "a");//报错 越界  addLast限定了下标
 		//删除元素
 		list.removeLast();
 		//push操作（压）  先进后出

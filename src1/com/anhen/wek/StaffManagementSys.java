@@ -20,6 +20,7 @@ import java.util.Scanner;
 
 public class StaffManagementSys {
 	
+	@SuppressWarnings("unchecked")
 	public static <BirthdayCollection, BirthdayComparator> void main(String []args){
 		StaffManagements sm = new StaffManagements();
 		String path = "D:\\6.txt";
@@ -35,14 +36,14 @@ public class StaffManagementSys {
 		//sf.show();
 		
 		
-		ArrayList  al=new ArrayList();
+		ArrayList<Staffs>  al=new ArrayList<Staffs>();
 		al.add(sm.add("1001", "小王", "1993-10-23", "23454@qq.com", "哪儿", "50.6"));
 		al.add(sm.add("1002", "小柳", "1992-04-07", "sfgs23@qq.com", "表里", "67.3"));
 		System.out.println("按键  :  1.添加员工  2.删除员工 3.修改员工 4.查找员工");
 	    //按生日排序
 	    al.sort(new Birthday());
 	    
-		Iterator it = al.iterator();
+		Iterator<Staffs> it = al.iterator();
 		   while(it.hasNext()){
 			   System.out.println(it.next());//显示集合
 		   }
@@ -87,7 +88,7 @@ public class StaffManagementSys {
 	        String weight = sc.next();
 	      al.add(sm.add(id, name, birthday, email, address, weight));
 	      Staffs staffs= new Staffs(id, name, birthday, email, address, weight);
-	   Iterator it1 = al.iterator();
+	   Iterator<Staffs> it1 = al.iterator();
 	   while(it1.hasNext()){
 		   System.out.println(it1.next());
 	   }
